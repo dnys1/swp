@@ -9,3 +9,7 @@ The feather watershed is the watershed at the start of the State Water Project. 
 Temperature/Precipitation data is from NOAA site USC00047195 in the middle of the watershed near Quincy, CA.
 
 ![NOAA Site Map](images/noaa_site_map.png)
+
+## Google Earth
+
+- [FEA_watersheds.kml](http://hydra.ucdavis.edu/node/35) - Watershed boundary map
