@@ -1,5 +1,13 @@
 # Feather Watershed
 
+- [Feather Watershed](#feather-watershed)
+    - [Overview](#overview)
+    - [Data Sources](#data-sources)
+    - [Data Files](#data-files)
+    - [Google Earth](#google-earth)
+
+## Overview
+
 The feather watershed is the watershed at the start of the State Water Project. It consists primarily of three lakes which feed into Lake Oroville.
 
 ![Feather Watershed Map](images/watershed_map.jpg)
