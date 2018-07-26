@@ -12,6 +12,6 @@ The following NOAA gauge was selected for Temperature/Precipitation data.
 
 ## Data Files
 
-| Filename             | Type                      | Source/Site no.                                                                                        | Start Date | End Date   |
-| -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
-| noaa_USC00045119.csv | Temperature/Precipitation | [NOAA USC00045119](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00045119/detail) | 1932-09-01 | 2018-05-31 |
+| Filename                                     | Type                      | Source/Site no.                                                                                        | Start Date | End Date   |
+| -------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
+| [noaa_USC00045119.csv](noaa_USC00045119.csv) | Temperature/Precipitation | [NOAA USC00045119](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00045119/detail) | 1932-09-01 | 2018-05-31 |

@@ -14,7 +14,7 @@ NOAA Temperature and Precipitation data was collected from the station in Liverm
 
 ## Data Files
 
-| Filename             | Type                      | Source/Site no.                                                                                        | Start Date | End Date   |
-| -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
-| noaa_USC00045933.csv | Temperature/Precipitation | [NOAA USC00045933](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00045933/detail) | 1948-07-01 | 2018-07-21 |
-| usgs_11176400.csv    | Discharge                 | [USGS 11176400](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11176400)           | 1963-10-01 | 2018-07-25 |
+| Filename                                     | Type                      | Source/Site no.                                                                                        | Start Date | End Date   |
+| -------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
+| [noaa_USC00045933.csv](noaa_USC00045933.csv) | Temperature/Precipitation | [NOAA USC00045933](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00045933/detail) | 1948-07-01 | 2018-07-21 |
+| [usgs_11176400.csv](usgs_11176400.csv)       | Discharge                 | [USGS 11176400](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11176400)           | 1963-10-01 | 2018-07-25 |

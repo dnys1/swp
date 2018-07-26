@@ -30,12 +30,12 @@ Temperature/Precipitation data is from NOAA site USC00047195 in the middle of th
 
 ## Data Files
 
-| Filename             | Type         | Source/Site no.                                                                                        | Start Date | End Date   |
-| -------------------- | ------------ | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
-| noaa_USC00047195.csv | Temp/Precip. | [NOAA USC00047195](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00047195/detail) | 1895-04-01 | 2018-07-23 |
-| usgs_11404500.csv    | Discharge    | [USGS 11404500](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11404500)           | 1911-04-01 | 2017-09-30 |
-| usgs_11396200.csv    | Discharge    | [USGS 11396200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11396200)           | 1962-09-30 | 2017-09-30 |
-| usgs_11405200.csv    | Discharge    | [USGS 11405200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11405200)           | 1986-08-27 | 2017-09-30 |
+| Filename                                     | Type         | Source/Site no.                                                                                        | Start Date | End Date   |
+| -------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------ | ---------- | ---------- |
+| [noaa_USC00047195.csv](noaa_USC00047195.csv) | Temp/Precip. | [NOAA USC00047195](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USC00047195/detail) | 1895-04-01 | 2018-07-23 |
+| [usgs_11404500.csv](usgs_11404500.csv)       | Discharge    | [USGS 11404500](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11404500)           | 1911-04-01 | 2017-09-30 |
+| [usgs_11396200.csv](usgs_11396200.csv)       | Discharge    | [USGS 11396200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11396200)           | 1962-09-30 | 2017-09-30 |
+| [usgs_11405200.csv](usgs_11405200.csv)       | Discharge    | [USGS 11405200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11405200)           | 1986-08-27 | 2017-09-30 |
 
 ## Google Earth
 
