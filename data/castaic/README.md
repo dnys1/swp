@@ -1,5 +1,7 @@
 # Castaic Lake/Elderberry Forebay
 
+![Castaic Lake Watershed Boundary](images/castaic_lake_watershed_boundary.jpg)
+
 ## Data Sources
 
 Reservoir storage data was collected from the circled station. No stations had discharge data outside 1976-1993.

@@ -2,6 +2,8 @@
 
 > Located in Arroyo Del Valle, about four miles from the City of Livermore in Alameda County, Del Valle Dam and Lake Del Valle provide regulatory storage for the South Bay Aqueduct, flood control for Alameda Creek, conservation of storm runoff, recreation, and fish and wildlife enhancement. The facility was constructed from 1966 and 1968.
 
+![del Valle Watershed Boundary](images/del_valle_watershed_boundary.jpg)
+
 ## Data Sources
 
 USGS discharge data is collected at the following site:

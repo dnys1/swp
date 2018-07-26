@@ -1,5 +1,7 @@
 # Pyramid Lake
 
+![Pyramid Lake Watershed Boundary](images/pyramid_lake_watershed_boundary.jpg)
+
 ## Data Sources
 
 USGS Discharge data was collected from the two stations below.

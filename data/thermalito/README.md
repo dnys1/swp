@@ -4,7 +4,9 @@
     - [Data Sources](#data-sources)
     - [Data Files](#data-files)
 
-The Thermalito Afterbay directly follows Lake Oroville in the State Water Project. The afterbay has many intakes around its perimeter, as shown below.
+The Thermalito Afterbay directly follows Lake Oroville in the State Water Project.
+
+![Thermalito Watershed Boundary](images/thermalito_watershed_boundary.jpg)
 
 ## Data Sources
 

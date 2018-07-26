@@ -1,5 +1,7 @@
 # San Luis Reservoir/O'Neill Forebay/Los Banos Reservoir
 
+![San Luis Watershed Boundary](images/san_luis_watershed_boundary.jpg)
+
 ## Data Sources
 
 Because San Luis is an artificial lake which water is pumped to, there is no upstream data. Nor are there any gauges for the O'Neill Forebay. The markers shown below in the reservoir are not generating real-time data.

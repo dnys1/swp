@@ -10,7 +10,7 @@
 
 The feather watershed is the watershed at the start of the State Water Project. It consists primarily of three lakes which feed into Lake Oroville.
 
-![Feather Watershed Map](images/watershed_map.jpg)
+![Feather Watershed Map](images/feather_watershed_boundary.jpg)
 
 ## Data Sources
 
@@ -22,11 +22,11 @@ Streamgage data is from USGS sites 11404500, 11396200, and 11405200.
 | 6   | **Site Number:** [11396200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11396200) |
 | 9   | **Site Number:** [11405200](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11405200) |
 
-![USGS Site Map](images/usgs_site_map.png)
+![USGS Site Map](images/feather_usgs_map.png)
 
 Temperature/Precipitation data is from NOAA site USC00047195 in the middle of the watershed near Quincy, CA.
 
-![NOAA Site Map](images/noaa_site_map.png)
+![NOAA Site Map](images/feather_noaa_map.png)
 
 ## Data Files
 
