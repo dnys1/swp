@@ -6,6 +6,8 @@
 
 The Thermalito Afterbay directly follows Lake Oroville in the State Water Project.
 
+**Operating Agency**: CA Dept of Water Resources
+
 ![Thermalito Watershed Boundary](images/thermalito_watershed_boundary.jpg)
 
 ## Data Sources
