@@ -30,3 +30,4 @@ Discharge data was collected for the following sites:
 | [cdec_TAB_monthly.csv](cdec_TAB_monthly.csv)                 | Reservoir Storage (af) - Monthly | [CDEC TAB](http://cdec.water.ca.gov/dynamicapp/staMeta?station_id=TAB)                       | 1967-10-01 | 2018-07-01 |
 | [cdec_TAB_daily.csv](cdec_TAB_daily.csv)                     | Reservoir Storage (af) - Daily   | [CDEC TAB](http://cdec.water.ca.gov/dynamicapp/staMeta?station_id=TAB)                       | 1985-01-01 | 2018-07-28 |
 | [cdec_TAB_elevation_daily.csv](cdec_TAB_elevation_daily.csv) | Reservoir Level (ft) - Daily     | [CDEC TAB](http://cdec.water.ca.gov/dynamicapp/staMeta?station_id=TAB)                       | 2008-01-01 | 2018-07-28 |
+| [cdec_TFR_monthly.csv](cdec_TFR_monthly.csv)                 | Reservoir Storage (af) - Monthly | [CDEC TFR](http://cdec.water.ca.gov/dynamicapp/staMeta?station_id=TFR)                       | 1969-10-01 | 2018-07-01 |
