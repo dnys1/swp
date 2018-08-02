@@ -38,6 +38,8 @@ Temperature/Precipitation data is from NOAA site USC00047195 in the middle of th
 
 ![NOAA Site Map](images/feather_noaa_map.png)
 
+For storage data, California's CDEC was used and for all 4 reservoirs, elevation was also available going back at least 25 years.
+
 ## Data Files
 
 | Filename                                                     | Type                             | Source/Site no.                                                                                        | Start Date | End Date   |
