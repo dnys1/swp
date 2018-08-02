@@ -21,6 +21,8 @@ Discharge data was collected for the following sites:
 | 1   | **Site Number:** [11406810](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11406810) |
 | 2   | **Site Number:** [11407000](https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=11407000) |
 
+Storage data was most prevalently available. To convert into elevation data, Area-Storage-Elevation curves were acquired [here](http://wdl.water.ca.gov/orovillerelicensing/docs/app_ferc_license_2005/Vol_I_Exhibit%20B.pdf).
+
 ## Data Files
 
 | Filename                                                     | Type                             | Source/Site no.                                                                              | Start Date | End Date   |
