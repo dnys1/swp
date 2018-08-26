@@ -1,0 +1,15 @@
+Value,Count,Coefficient,Description
+21,172613,1.4,"Developed, Open Space"
+22,282400,1,"Developed, Low Intensity"
+23,494096,0.6,"Developed, Medium Intensity"
+24,183056,0.2,"Developed, High Intensity"
+31,2559,0,Barren Land (Rock/Sand/Clay)
+41,8,2.8,Deciduous Forest
+42,4524,2.8,Evergreen Forest
+43,11464,2.8,Mixed Forest
+52,175715,2,Dwarf Scrub
+71,26044,2,Grassland/Herbaceous
+81,266,2,Pasture/Hay
+82,169,2,Cultivated Crops
+90,2896,2,Woody Wetlands
+95,3152,2,Emergent Herbaceous Wetlands
