@@ -24,6 +24,14 @@ bounds = "-118.669433275236 33.7021128831574 -118.154627646908 34.3382533582622"
 # Value that PRISM uses for NaN or No Data
 PRISM_NaN = -9999
 
+# Conversion factors between 
+# lat/long in decimal and km
+# km^2 to acre
+# mm to ft
+km_per_latlong_dec = 96.0
+acre_per_km2 = 247.105
+mm_per_ft = 304.8
+
 # Iterate over every month in years 1990-2015
 years = range(1990, 2016)
 months = ["01", "02", "03", "04", "05",
@@ -31,7 +39,7 @@ months = ["01", "02", "03", "04", "05",
 
 # Create data frame for storing values
 df_NaN = -1.0
-parameters = ["PRCP", "ET", "AET"]
+parameters = ["PRCP", "ET", "AET", "Supply"]
 date_range = pd.date_range(start='1/1/1990', end='12/31/2015', freq='MS')
 empty_array = np.array([df_NaN] * len(date_range) * len(parameters)
 					   ).reshape((len(date_range), len(parameters)))
@@ -150,18 +158,38 @@ for year in years:
 		
 		landuse_resample_masked = ma.masked_array(landuse_resample, mask=mask)
 		landuse_resample_masked = landuse_resample_masked.filled(PRISM_NaN)
-		
+	
 		w = arcpy.NumPyArrayToRaster(
 			landuse_resample_masked, lower_left, xdiff, ydiff, PRISM_NaN)
+		
+		if PRCP > 0.0:
+			AET_raster = raster * (1 + w * ET_raster / raster) / (1 + w * ET_raster / raster + raster / ET_raster)
+		else:
+			AET_raster = raster
 			
-		AET_raster = PRCP * (1 + w * ET / PRCP) / (1 + w * ET / PRCP + PRCP / ET)
 		AET = AET_raster.mean
+		
+		# Total raster area in km^2
+		area_per_pixel = km_per_latlong_dec * xdiff * km_per_latlong_dec * ydiff
+		num_pixels = np.count_nonzero(1 - mask)
+		raster_area_km2 = area_per_pixel * num_pixels
 
-		# Set the values in our global table
+		# Total raster area in acre
+		raster_area_acre = raster_area_km2 * acre_per_km2
+		
+		# Create WaSSI supply metric = PRCP - AET
+		# Subtract first, then spatially average
+		supply_raster = raster - AET_raster
+		supply_mm = supply_raster.mean
+		supply_ft = supply_mm / mm_per_ft
+		supply = supply_ft * raster_area_acre
+
+		# # Set the values in our global table
 		date = '{}/1/{}'.format(month, year)
 		df['PRCP'][date] = PRCP
 		df['ET'][date] = ET
 		df['AET'][date] = AET
+		df['Supply'][date] = supply
 
 		# Clear all temporary data to prevent memory overflow
 		# and so we can use the same names
@@ -172,7 +200,15 @@ for year in years:
 		arcpy.Delete_management(tr)
 		arcpy.Delete_management(flux_raster)
 		arcpy.Delete_management(ET_raster)
+		arcpy.Delete_management(AET_raster)
+		arcpy.Delete_management(supply_raster)
 		arcpy.Delete_management(w)
-
-# Write the dataframe to file
+		
+# Write the dataframes to file
 df.to_csv('PRISM_processed.csv')
+
+def get_year(date):
+	return date.year
+	
+supply_df = df.groupby(get_year).sum()
+supply_df.to_csv('WASSI_supply.csv')
