@@ -71,6 +71,14 @@ def daily_flux(month, day, latitude):
 	 
 	return 2 * I_sc * Ec * (np.cos(dec) * np.cos(lat) * np.sin(vel * Ths) / vel \
 			+ np.sin(dec) * np.sin(lat) * Ths)
+			
+def monthly_flux(month, day, latitude):
+	"""Returns the monthly solar radiation flux.
+	"""
+	
+	days_per_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+	
+	return daily_flux(month, day, latitude) * days_per_month[int(month) - 1]
 
 # Set default land-use w values
 w_val = {

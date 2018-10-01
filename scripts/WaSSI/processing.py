@@ -127,7 +127,7 @@ for year in years:
 			latitude = yvals[row]
 
 			# Get the flux from our tools package
-			flux = tools.daily_flux(month, 15, latitude)
+			flux = tools.monthly_flux(month, 15, latitude)
 
 			# Fill that row (i.e. latitude) with the flux
 			flux_table[row, :] = [flux] * ncol
