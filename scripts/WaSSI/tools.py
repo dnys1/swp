@@ -7,7 +7,7 @@ import pandas as pd
 # to the solar beam at the upper surface of the atmosphere
 #
 # Units: MJ m^-2
-I_sc = 118.1
+I_sc = 4.921
 
 # Day Angle
 # ---------
@@ -49,22 +49,6 @@ def declination(day_angle):
 	return (180 / np.pi) * (0.006918 - 0.399912 * np.cos(day_angle) + 0.070257 * np.sin(day_angle) \
 			- 0.006758 * np.cos(2 * day_angle) + 0.000907 * np.sin(2 * day_angle) - 0.002697 * np.cos(3 * day_angle) \
 			+ 0.00148 * np.sin(3 * day_angle))
-
-# Zenith Angle
-# ------------
-# Description: Angle between line from an observer on earth to the snun
-# and a line extending from the observer, perpendicular to Earth
-# 
-# Units: Degrees
-def zenith_angle(day_angle, latitude):
-	"""Returns the zenith angle given the day angle, latitude (degrees).
-	"""
-	# Declination in radians
-	dec = np.deg2rad(declination(day_angle))
-	# Latitude in radians
-	lat = np.deg2rad(latitude)
-	
-	return np.arccos(np.sin(dec) * np.sin(lat) + np.cos(dec) * np.cos(dec))
 
 def daily_flux(month, day, latitude):
 	"""Returns the daily solar radiation flux.

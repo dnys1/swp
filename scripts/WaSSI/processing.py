@@ -8,14 +8,14 @@ import WaSSI_ArcGIS as WaSSI
 import tools
 
 # Set current workspace folder
-arcpy.env.workspace = "C:/Users/DBP/Documents/ArcGIS"
+arcpy.env.workspace = "C:/Users/dnys1/Documents/ArcGIS"
 prism_path = "E:/PRISM/"
 
 # Enable spatial analysis toolkit
 arcpy.CheckOutExtension("Spatial")
 
 # Import the shapefile which defines the boundary of LA
-la_shapefile_path = "C:/Users/DBP/Documents/ArcGIS/APC/APC.shp"
+la_shapefile_path = "C:/Users/dnys1/Downloads/APC/APC.shp"
 la_shapefile = arcpy.mapping.Layer(la_shapefile_path)
 
 # Get the bounds from the shapefile. These set the rectangular bounding box only.
@@ -49,7 +49,7 @@ df = pd.DataFrame(empty_array, index=date_range,
 # Import land use map & clip to bounds
 landuse_bounds = "-2066855.180218 1418311.723318 -2004357.620718 1498465.598953"
 landuse_NaN = 255
-landuse_path = r"E:\nlcd_2001_landcover_2011_edition_2014_10_10\nlcd_2001_landcover_2011_edition_2014_10_10.img"
+landuse_path = r"C:\Users\dnys1\Downloads\nlcd_2001_landcover_2011_edition_2014_10_10\nlcd_2001_landcover_2011_edition_2014_10_10.img"
 landuse_temp_raster = arcpy.Raster(landuse_path)
 
 arcpy.Clip_management(landuse_temp_raster, landuse_bounds, "landuse", la_shapefile, landuse_NaN, "ClippingGeometry", "MAINTAIN_EXTENT")
@@ -205,10 +205,10 @@ for year in years:
 		arcpy.Delete_management(w)
 		
 # Write the dataframes to file
-df.to_csv('PRISM_processed.csv')
+df.to_csv('PRISM_monthly.csv')
 
 def get_year(date):
 	return date.year
 	
 supply_df = df.groupby(get_year).sum()
-supply_df.to_csv('WASSI_supply.csv')
+supply_df.to_csv('PRISM_yearly.csv')

@@ -4,20 +4,20 @@ import numpy.ma as ma
 
 # Set default land-use w values
 w_val = {
-	"21": 1.4,
-	"22": 1.0,
-	"23": 0.6,
-	"24": 0.4,
-	"31": 0.0,
-	"41": 2.8,
-	"42": 2.8,
-	"43": 2.8,
-	"52": 2.0,
-	"71": 2.0,
-	"81": 2.0,
-	"82": 2.0,
-	"90": 2.0,
-	"95": 2.0,
+	"21": 0.91,	# Developed, Open Space 	     <20% developed
+	"22": 0.75,	# Developed, Low Intensity 	   20-49% developed
+	"23": 0.66,	# Developed, Medium Intensity  50-79% developed
+	"24": 0.25,	# Developed, High Intensity	  80-100% developed
+	"31": 0.1,	# Barren Land
+	"41": 2.8,	# Deciduous Forest
+	"42": 2.8,	# Evergreen Forest
+	"43": 2.8,	# Mixed Forest
+	"52": 1.0,	# Shrub/Scrub
+	"71": 1.0,	# Grassland/Herbaceous
+	"81": 1.0,	# Pasture/Hay
+	"82": 1.0,	# Cultivated Crops
+	"90": 1.0,	# Woody Wetlands
+	"95": 1.0,	# Emergent Herbaceous Wetlands
 }
 
 def resample(landuse_raster, df_NaN, nrow, ncol):
