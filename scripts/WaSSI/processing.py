@@ -3,7 +3,6 @@ import arcpy.sa as sa
 import pandas as pd
 import numpy as np
 import numpy.ma as ma
-import WaSSI_ArcGIS as WaSSI
 
 import tools
 
@@ -153,7 +152,7 @@ for year in years:
 		ET = ET_raster.mean
 		
 		# Generate landuse raster
-		landuse_resample = WaSSI.resample(landuse_raster, df_NaN, nrow, ncol)
+		landuse_resample = tools.w_resample(landuse_raster, df_NaN, nrow, ncol)
 		landuse_resample = np.transpose(landuse_resample)
 		
 		landuse_resample_masked = ma.masked_array(landuse_resample, mask=mask)
