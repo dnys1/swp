@@ -3,6 +3,10 @@ import numpy as np
 import numpy.ma as ma
 import pandas as pd
 
+#####################
+## RADIATION TOOLS ##
+#####################
+
 # Solar Constant
 # --------------
 # Description: Average flux on a plane perpendicular 
@@ -80,6 +84,10 @@ def monthly_flux(month, day, latitude):
 	
 	return daily_flux(month, day, latitude) * days_per_month[int(month) - 1]
 
+###################
+## LANDUSE TOOLS ##
+###################
+	
 # Set default land-use w values
 w_val = {
 	"21": 0.91,	# Developed, Open Space 	     <20% developed

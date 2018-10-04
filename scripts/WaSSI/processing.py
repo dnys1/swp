@@ -146,9 +146,12 @@ for year in years:
 		lower_left = arcpy.Point(xmin, ymin)
 		flux_raster = arcpy.NumPyArrayToRaster(
 			flux_masked, lower_left, xdiff, ydiff, PRISM_NaN)
+		
+		# Convert MJ/m2/day to mm H2O/day
+		flux_in_mm = flux_raster * 238.8 / (595.5 - 0.55 * tc)
 
 		# Create the ET raster using Hargreaves equation
-		ET_raster = 0.0023 * flux_raster * (tc + 17.8) * sa.SquareRoot(tr)
+		ET_raster = 0.0023 * flux_in_mm * (tc + 17.8) * sa.SquareRoot(tr)
 		ET = ET_raster.mean
 		
 		# Generate landuse raster
