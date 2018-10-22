@@ -28,45 +28,54 @@ end
 plot(years, demand, 'markeredgecolor', RGB(1, :),...
     'markerfacecolor',[1 1 1],'markersize', 7, 'color', RGB(1, :), 'linewidth', 1.5);
 
-title('WASSI - Supply/Demand');
 xlabel('Year');
-ylabel('Supply (acre-ft)');
-legend('Hydro', 'Hydro + Infra', 'Hyrdo + Infra + Inst', 'Demand');
+ylabel('Volume (acre-ft)');
+legend({'Hydro', 'Hydro + Infra', 'Hyrdo + Infra + Inst', 'Demand'}, ...
+    'Location', 'southoutside', 'Orientation', 'horizontal');
 hold off
 
 %% Log WASSI figure
-figure
-hold on
-% Plot different WASSI indices
-for index = 1:num_indices
-    plot(years, wassi_log(:, index), ['-', m{index}], 'markeredgecolor', RGB(index, :),...
-        'markerfacecolor',[1 1 1],'markersize', 7, 'color', RGB(index, :), 'linewidth', 1.5);
-end
-
-title('WASSI');
-xlabel('Year');
-ylabel('WASSI');
-legend('Hydro', 'Hydro + Infra', 'Hyrdo + Infra + Inst');
-
-tick_vals = [0.05, 0.1, 0.5, 1, 5, 10, floor(max(max(wassi)))];
-yticks(log(tick_vals));
-yticklabels(string(tick_vals));
-hold off
+% figure
+% hold on
+% % Plot different WASSI indices
+% for index = 1:num_indices
+%     plot(years, wassi_log(:, index), ['-', m{index}], 'markeredgecolor', RGB(index, :),...
+%         'markerfacecolor',[1 1 1],'markersize', 7, 'color', RGB(index, :), 'linewidth', 1.5);
+% end
+% 
+% xlabel('Year');
+% ylabel('WASSI');
+% legend('Hydro', 'Hydro + Infra', 'Hyrdo + Infra + Inst');
+% 
+% tick_vals = [0.05, 0.1, 0.5, 1, 5, 10, floor(max(max(wassi)))];
+% yticks(log(tick_vals));
+% yticklabels(string(tick_vals));
+% hold off
 
 %% Subplots WASSI Figure
 fig = figure;
 hold on
 % Plot different WASSI indices
 titles = ["Hydro", "Hydro + Infra", "Hyrdo + Infra + Inst"];
+labels = ["a)", "b)", "c)"];
 for index = 1:num_indices
     subplot(3, 1, index);
     plot(years, wassi(:, index), ['-', m{index}], 'markeredgecolor', RGB(index, :),...
         'markerfacecolor',[1 1 1],'markersize', 7, 'color', RGB(index, :), 'linewidth', 1.5);
-    title(titles(index));
+    if index ~= 1
+        ylim([0 1]);
+    end
+    y = ylabel(labels(index));
+    t = title('');
+    vf = 0.8;
+    dy = 0.8;
+    ypos = get(y, 'Position');
+    tpos = get(t, 'Position');
+    set(y, 'Position', [ypos(1)-dy tpos(2)*vf ypos(3)], 'Rotation', 0);
 end
 
 supAxes = [.09 .12 .85 .825];
 suplabel('Year', 'x', supAxes);
-suplabel('WASSI Index', 'y', supAxes);
-suplabel('WASSI', 't', supAxes);
+suplabel('WaSSI', 'y', supAxes);
+% suplabel('WASSI', 't', supAxes);
 hold off
